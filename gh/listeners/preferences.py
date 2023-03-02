@@ -11,7 +11,7 @@ class PreferencesEventListener(EventListener):
 
     def on_event(self, event, extension):
         """ Handle event """
-        extension.github = Github(event.preferences['access_token'])
+        extension.github = Github(event.preferences['github_access_token'])
         try:
             extension.refresh_user()
             extension.refresh_data()
@@ -25,7 +25,7 @@ class PreferencesUpdateEventListener(EventListener):
 
     def on_event(self, event, extension):
         """ Event handler """
-        if event.id == 'access_token':
+        if event.id == 'github_access_token':
             extension.github = Github(event.new_value)
             try:
                 extension.refresh_user()

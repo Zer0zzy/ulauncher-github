@@ -100,7 +100,7 @@
             "default_value": "gh"
         },
         {
-            "id": "access_token",
+            "id": "github_access_token",
             "type": "input",
             "name": "GitHub access token",
             "description": "The Personal Access token to authenticate on GitHub API",
