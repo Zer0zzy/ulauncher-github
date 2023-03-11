@@ -58,8 +58,8 @@ class GitHubExtension(Extension):
         self.subscribe(ItemEnterEvent, ItemEnterEventListener())
 
         self.icon_path = 'images/icon.png'
-        self.github: Github = None
-        self.user: AuthenticatedUser = None
+        self.github: Github = ""
+        self.user: AuthenticatedUser = ""
         self.cache = Cache(CACHE_DIR)
 
         Notify.init("Ulauncher GitHub")
